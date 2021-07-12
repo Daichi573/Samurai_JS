@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+ <head>
+   <meta charset="utf-8">
+   <title>jQueryの学習</title>
+   <style>
+     
+   </style>
+ </head>
+ <body>
+  <ul>
+    <li>Python</li>
+    <li>Ruby</li>
+    <li>PHP</li>
+  </ul>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+   const list = $(`<li>`,{
+     text:`JavaScript`
+   });
+   
+   $(`ul`).append(list);
+  </script>
+ </body>
+</html>

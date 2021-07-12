@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+ <head>
+   <meta charset="utf-8">
+   <title>jQueryの学習</title>
+   <style>
+     
+   </style>
+ </head>
+ <body>
+  <input id="target" type="text"/>
+  <button>取得</button>
+  <h2></h2>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+   $('button').on('click',()=>{
+     const url = 'https://b.hatena.ne.jp/entry/jsonlite/?url=';
+     
+     $.ajax({
+       url:url+$('#target').val(),
+       dataType:"jsonp",
+     }).done(data=>{
+       if(data){
+         $('h2').text(data.count+'個のブックマークが登録されています');
+       }else {
+         $('h2').text(`はてなブックマークに登録されていません`)
+       }
+     });
+   })
+  </script>
+ </body>
+</html>

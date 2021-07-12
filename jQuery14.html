@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+ <head>
+   <meta charset="utf-8">
+   <title>jQueryの学習</title>
+   <style>
+     
+   </style>
+ </head>
+ <body>
+  <form>
+    趣味：
+     <input type="checkbox" name="hobby" value="book">読書
+     <input type="checkbox" name="hobby" value="music">音楽
+     <input type="checkbox" name="hobby" value="movie">映画
+     <input type="checkbox" name="hobby" value="walk">散歩
+     </br>
+     <input type="button" value="確認"/>
+  </form>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+   $('[type="button"]').on('click',()=>{
+     $('[name="hobby"]:checked').each(function(){
+       console.log($(this).val() );
+     })
+   })
+  </script>
+ </body>
+</html>

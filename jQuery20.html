@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+ <head>
+   <meta charset="utf-8">
+   <title>jQueryの学習</title>
+   <style>
+     
+   </style>
+ </head>
+ <body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+   $.ajax({
+     url:'https://b.hatena.ne.jp/entry/jsonlite/?url=https://www.hatena.ne.jp/',
+     dataType:'jspon',
+   }).done(data=>{
+     console.log(data);
+   })
+  </script>
+ </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+ <head>
+   <meta charset="utf-8">
+   <title>jQueryの学習</title>
+   <style>
+     
+   </style>
+ </head>
+ <body>
+  <ul>
+    <li class="list-test">項目１</li>
+    <li class="sample-list">項目２</li>
+    <li class="sample-text">項目３</li>
+  </ul>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+   const text = $(`li[class^="sample"]`).text();
+   
+   console.log(text);
+  </script>
+ </body>
+</html>

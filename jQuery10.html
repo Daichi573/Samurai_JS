@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+ <head>
+   <meta charset="utf-8">
+   <title>jQueryの学習</title>
+   <style>
+     
+   </style>
+ </head>
+ <body>
+  <div style="width:100px;
+              height:100px;
+              background-color:#555;"></div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+   $('div').on({
+     'click':()=>{
+       $('div').css('background-color','red');
+     },
+     'dblclick':()=>{
+       $('div').css('background-color','black');
+     },
+     'mouseenter':()=>{
+       $('div').css('background-color','blue');
+     },
+   })
+  </script>
+ </body>
+</html>

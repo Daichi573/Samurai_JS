@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+ <head>
+   <meta charset="utf-8">
+   <title>jQueryの学習</title>
+   <style>
+     
+   </style>
+ </head>
+ <body>
+  <input id="target" type="text"/>
+  <button>取得</button>
+  <ul></ul>
+  <script src="jquery-3.6.0.min.js"></script>
+  <script>
+   const url = 'https://qiita.com/api/v2/tags/';
+
+$('button').on('click', () => {
+    $.ajax({
+      url:url + $('#target').val() + '/items',
+      dataType:"json",
+    }).done(data => {
+    console.log(data);
+    })
+})
+  </script>
+ </body>
+</html>
